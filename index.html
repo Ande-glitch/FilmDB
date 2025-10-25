@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film DB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Film DB</h1>
+        </div>
+    </header>
+    <main>
+        <div id="container1">
+            <h1 class="overskrift">Search a movie</h1>
+            <input type="text" placeholder="Search for a movie" aria-label="search for a movie" value="Titanic" id="inputSearch">
+            <input type="button" value="Search" id="inputBtn" onclick="movie()">
+        </div>
+        <div id="container2">
+            <div id="sub1">
+                <h2 id="movieTitle"></h2>
+                <p id="plot"></p>
+            </div>
+            <div id="picture">
+            <img src="" alt="Image of the movie" id="movieImg">
+            <div id="info">
+                <p id="country"></p>
+                <p id="genre"></p>
+                <p id="released"></p>
+                <p id="runtime"></p>
+                <p id="director"></p>
+                <p id="rated"></p>
+                <p id="boxOffice"></p>
+                <p id="year"></p>
+            </div>
+            </div>
+        </div>
+    </main>
+    <section>
+        <div>
+            <h1 class="overskrift">Recommendations</h1>
+        </div>
+        <div id="recom-images">
+            <img src="" alt="Loading Recommendations..." class="recom" id="mov1" value="test">
+            <img src="" alt="Loading Recommendations..." class="recom" id="mov2">
+            <img src="" alt="Loading Recommendations..." class="recom" id="mov3">
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>

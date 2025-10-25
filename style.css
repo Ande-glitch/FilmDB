@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(53, 51, 51);
+}
+
+header {
+    background-color: rgb(22, 20, 20);
+    color: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#container1 {
+  margin-bottom: 20px;
+}
+
+#inputSearch, #inputBtn {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+#container2 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 50px;
+}
+
+#sub1 {
+text-align: center;
+background: #fff;
+padding: 10px;
+border: 1px solid #ddd;
+}
+
+#picture {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* space between image and text */
+}
+
+#movieImg {
+  width: 267px; /* adjust as needed */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}   
+
+#info {
+    background-color: #fff;
+    padding: 8px;
+}
+    #info p {
+        padding: 10px 0px 10px 0px;
+    }
+#recom-images {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+}
+  #recom-images img {
+    width: 300px;
+    height: 350px;
+  }
+.overskrift {
+  color: white;
+}
