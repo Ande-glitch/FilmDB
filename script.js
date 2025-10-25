@@ -24,7 +24,7 @@ let num = null
 let imdbId = null
 let rightCode = "tt0120338"
 
-let recomAPI = `http://www.omdbapi.com/?i=${imdbId}&apikey=${myKey}`
+let recomAPI = `https://www.omdbapi.com/?i=${imdbId}&apikey=${myKey}`
 
 let movieElements = [mov1, mov2, mov3]
 let moviePosters = []
@@ -51,9 +51,9 @@ async function validateMoviePosters() { // venter til at checkPoster function fu
   }
   moviePosters = validPosters;
 }
-
+let deadInt = 0
 function refreshRec() {
-
+  deadInt++
   if (moviePosters.length >= 3) {
     for (let i = 0; i < movieElements.length; i++) {
       movieElements[i].src = moviePosters[i];
@@ -61,12 +61,15 @@ function refreshRec() {
     }
     return; // stop code
   }
+  else if (deadInt >= 100){
+    return;
+  }
 
     document.getElementById("recom-images").style.display = "flex"
 
     num = Math.floor(Math.random() * 9999999)
     imdbId = "tt"+num.toString().padStart(7, "0")
-    recomAPI = `http://www.omdbapi.com/?i=${imdbId}&apikey=${myKey}`
+    recomAPI = `https://www.omdbapi.com/?i=${imdbId}&apikey=${myKey}`
 
     console.log(imdbId);
 
@@ -77,6 +80,7 @@ function refreshRec() {
             refreshRec() //retry
         }
         else if (data.Response == "True" && data.Poster != "N/A" && data.Genre){
+          deadInt = 0
             let img = new Image()
             img.onload = () => {
                 moviePosters.push(data.Poster)
@@ -102,7 +106,7 @@ function movie() {
     }
     moviePosters = []
     movieTitles = []
-    let API = `http://www.omdbapi.com/?t=${inputSearch.value}&apikey=${myKey}`    
+    let API = `https://www.omdbapi.com/?t=${inputSearch.value}&apikey=${myKey}`    
     const randomAPI = `https://www.omdbapi.com/?s=matrix&type=movie&page=2&apikey=${myKey}`
 
     fetch(API)
