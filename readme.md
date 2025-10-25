@@ -1,7 +1,7 @@
-<h1 align="center">Weather API</h1>
+<h1 align="center">FILM DB</h1>
 <div align="center">
   <h3>
-    <a href="https://ande-glitch.github.io/WeatherAPI/index.html">
+    <a href="https://ande-glitch.github.io/FilmDB/index.html">
       Link to project
     </a>
   </h3>
